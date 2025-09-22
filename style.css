@@ -1,0 +1,341 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      background-color:#5C4693;
+      color: #fff;
+      padding: 20px 20px;
+      text-align: center;
+    }
+
+    .second {
+        background-color: #fff;
+      color: #5C4693;
+      padding: 50px 20px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .second h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .second p {
+      font-size: 1.2rem;
+    }
+    
+
+    /* NAVIGATION */
+    nav {
+      background-color: #5C4693;
+      padding: 10px 0;
+      text-align: center;
+      position: Sticky;
+      top: 0;
+      color: white;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #2C99CF;
+    }
+
+    /* SECTION WRAPPER */
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #004080;
+    }
+
+    /* SERVICES / PROJECTS GRID */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex: 1 1 260px;
+      max-width: 320px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: #5C4693;
+      box-shadow: 0 0 15px rgba(92, 70, 147, 1);
+    }
+
+    .card h3 {
+      color: #004080;
+      margin-bottom: 10px;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+    }
+
+    /* ABOUT SECTION */
+    #about ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+
+    #about li {
+      margin-bottom: 10px;
+    }
+
+    /* CONTACT */
+    #contact p {
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav a {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .container {
+      display: flex;
+    justify-content: center;   /* Center children horizontally */
+      border: 1px solid #0000;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 100%;
+      
+    }
+
+    .left-column {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left-column img {
+      width: 200px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .right-column {
+      border-left: 2px solid #2C99CF;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    .right-column h1 {
+      font-size: 3rem;
+      color: #5C4693;
+      margin: 0;
+      text-align: left;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .right-column {
+        border-left: none;
+        border-top: 2px solid #ccc;
+      }
+
+      .left-column img {
+        width: 100%;
+      }
+    }
+
+    .image-text-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  gap: 30px;
+  flex-wrap: wrap; /* Responsive: stacks on small screens */
+}
+
+.image-text-row img {
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.text-content h2 {
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+.text-content p {
+  line-height: 1.6;
+  color: #333;
+}
+
+/*Button*/
+.button-wrapper {
+  text-align: center; /* This centers inline elements like <a> or <button> */
+  margin-top: 20px;
+}
+
+.read-more-btn {
+align-items: center;
+  justify-content: center;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004080;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+   transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    transform: scale(1.1); 
+  background-color: #2C99CF;
+}
+
+.center-image {
+      display: block;
+      margin: 0 auto;
+    }
+
+/*Fade*/
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.background-box {
+  width: 100%;
+  height: 800px;
+  background-image: url("Images/Single elevator.png"); /* replace with your image path */
+  background-size: cover;        /* Make image cover the entire div */
+  background-position: center;   /* Center the image */
+  background-repeat: no-repeat;  /* Prevent tiling */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+.Contact{
+  width: 100%;
+  max-width: 100%;
+  color: white;
+}
+
+.Contact h2{
+    color: white;
+}
+
+nav a.active {
+      color: #004080;
+
+    }
+
+.box {
+            display: inline-block;
+            margin-right: 100px;
+            align-items: center;
+    }
+
+.image-container {
+      position: relative;
+      text-align: center;
+      color: white;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 50%;
+      display: block;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5); /* Optional: background for readability */
+      padding: 10px 20px;
+      border-radius: 5px;
+    }    
+
+

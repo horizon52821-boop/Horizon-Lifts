@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link rel="stylesheet" href="style.css" />
+  <title>PowerMech Engineering Services</title>
+  <style>
+    /* RESET & GLOBAL */
+    
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="first">
+  </header>
+  <header class="second">
+    <div class="container">
+    <!-- Left Column: Image -->
+    <div class="left-column">
+      <img src="Images/Logo White Backround.png" alt="Logo">
+    </div>
+
+    <!-- Right Column: Title -->
+    <div class="right-column">
+      <h1><strong>HORIZON</strong><strong><br>LIFTS</strong> (PVT)<strong><br>LIMITED</strong> </h1>
+    </div>
+  </div>
+  </header>
+
+  <!-- Navigation -->
+   <div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about us.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="approach.html">Aproach</a>
+    <a href="contact us.html">Contact Us</a>
+  </nav>
+  </div>
+ 
+<div class="background-box">
+
+</div>
+
+
+
+  <!-- About Us --> 
+<section id = "about">
+  <div class="image-text-row">
+  <img src="Images/Collage.png" alt="Placeholder Image">
+  <div class="text-content">
+    <h2>About Us</h2>
+    <p>Horizon Lifts (Pvt) Limited isn’t just another elevator company—they’re the trusted force behind seamless vertical transport across both government and private sectors. With a reputation for reliability and a footprint that extends to Malawi under the name Power Merch Engineering, they’re not only lifting people but raising the bar for service excellence and economic impact.</p><br>
+ <div class = "button-wrapper">
+    <button class="read-more-btn" onclick="toggleMore()">Read More</button> 
+    </div>
+</div>
+</div>
+</section>
+
+ <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="fade-in-section">
+        <img src="Images/Icons/elevator-solid-full.svg" alt="Icon" width="80" height="80" class="center-image">
+        <h3>Lift Installation</h3>
+        <p>Full delivery, installation, and commissioning of passenger and goods lifts.</p>
+        </div>
+        <div class = "button-wrapper">
+    <button class="read-more-btn" onclick="toggleMore()">Read More</button> 
+    </div>
+      </div>
+      <div class="card">
+        <div class="fade-in-section">
+        <img src="Images/Icons/repeat-solid-full.svg" alt="Icon" width="80" height="80" class="center-image">
+        <h3>Modernization</h3>
+        <p>Upgrade your lifts to safer, more efficient, modern systems.</p>
+        </div>
+        <div class = "button-wrapper">
+    <button class="read-more-btn" onclick="toggleMore()">Read More</button> 
+    </div>
+      </div>
+      <div class="card">
+        <div class="fade-in-section">
+        <img src="Images/Icons/gears-solid-full.svg" alt="Icon" width="80" height="80" class="center-image">
+        <h3>Maintenance</h3>
+        <p>Long-term repair and upkeep services for lifts and escalators.</p>
+        </div>
+        <div class = "button-wrapper">
+    <button class="read-more-btn" onclick="toggleMore()">Read More</button> 
+    </div>
+      </div>
+      <div class="card">
+        <div class="fade-in-section">
+        <img src="Images/Icons/screwdriver-wrench-solid-full.svg" alt="Icon" width="80" height="80" class="center-image">
+        <h3>Repairs</h3>
+        <p>24/7 emergency breakdown and repair services.</p>
+        </div>
+        <div class = "button-wrapper">
+    <button class="read-more-btn" onclick="toggleMore()">Read More</button> 
+    </div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- Brands -->
+  <section id="brands">
+    <h2>Our Brands</h2>
+    <img src="Images/Clients.png" alt="Icon" width="100%" height="200" class="center-image">
+  </section> 
+
+
+
+  <!-- Contact -->
+  <section id="contact" style="background:#222;" class="Contact">
+    <h2>Contact Us</h2>
+    <div class="box">
+      <p><img src="Images/Icons/building-solid-full.svg" alt="home" width="20" height="20"><strong> Office:</strong><br>
+        18B Trinity Road Greendale Harare,<br>Zimbabwe</p>
+    </div>
+    <div class="box">
+      <p><img src="Images/Icons/phone-solid-full.svg" alt="phone" width="20" height="20"><strong> Phone:</strong> +263 (0)778 738 870 / +265 (0)985 214 149</p>
+    <p><img src="Images/Icons/whatsapp-brands-solid-full.svg" alt="Whats app" width="20" height="20"><strong> Whats App:</strong>  +265 (0) 992 709 504 / +263 (0) 773 799 334</p>
+    </div>
+    <div class="box">
+      <p><img src="Images/Icons/envelope-solid-full.svg" alt="envelope" width="20" height="20"><strong> Email:</strong> info@pesmw.com, admin@pesmw.com</p>
+    <p><img src="Images/Icons/clock-solid-full.svg" alt="clock" width="20" height="20"><strong> Hours:</strong> Mon–Fri: 8:00 AM – 4:30 PM</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PHorizon Lifts (Pvt) Limited | Excellence in Lift & Escalator Solutions</p>
+  </footer>
+
+</body>
+
+<script>
+    const sections = document.querySelectorAll('.fade-in-section');
+
+const observer = new IntersectionObserver((entries, observer) => {
+  let delay = 0;
+
+  entries
+    .filter(entry => entry.isIntersecting)
+    .forEach((entry, index) => {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }, delay);
+      
+      delay += 300; // 300ms delay between each
+    });
+}, {
+  threshold: 0.1
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+// Highlight current link in nav
+  document.querySelectorAll("nav a").forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add("active");
+    }
+  });
+
+</script>
+</html>
