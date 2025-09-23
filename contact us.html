@@ -5,11 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <link rel="stylesheet" href="style.css" />
    <link rel="stylesheet" href="contact_form.css" />
+   <link rel="apple-touch-icon" sizes="180x180" href="Images/Icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Images/Icons//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Images/Icons//favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
   <title>Horizon Lifts</title>
   <style>
     /* RESET & GLOBAL */
     
   </style>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "whYDqY-iyB9GQ0k_N",
+      });
+   })();
+</script>
+<script src="script.js"></script>
 </head>
 <body>
 
@@ -48,14 +63,18 @@
 
   <div class="containers">
     <h2>Send Us a Message</h2>
-    <form action="contact.php" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Phone Number" />
-      <input type="text" name="subject" placeholder="Subject" />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
+    <form>
+      
+      <input type="text" name="name" id="name" placeholder="Your Name" required />
+      
+      <input type="email" name="email" id="email" placeholder="Your Email" required />
+      
+      <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
+      <input type="text" name="subject"  id="subject"placeholder="Subject" />
+      <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+      <button type="button" onclick="sendMail()">Send</button>
     </form>
+    <script type="text/javascript" src="script.js"></script>
 
     <div class="map">
       <h2>Our Office Location</h2>
@@ -87,7 +106,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 PHorizon Lifts (Pvt) Limited | Excellence in Lift & Escalator Solutions</p>
+    <p>© 2025 Horizon Lifts (Pvt) Limited | Excellence in Lift & Escalator Solutions</p>
   </footer>
 
 

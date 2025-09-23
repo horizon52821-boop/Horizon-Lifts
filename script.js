@@ -2,6 +2,28 @@
 let slideIndex = 0;
 let totalSlides = 6;
 
+    function sendMail(){
+            var templateParams={
+                name: document.querySelector("#name").value,
+                phone: document.querySelector("#phone").value,
+                email: document.querySelector("#email").value,
+                subject: document.querySelector("#subject").value,
+                message: document.querySelector("#message").value,
+            };
+
+            emailjs.send("service_dw0q0tj", "template_yl5iusu", templateParams).then(
+  (response) => {
+    alert("Message sent successfully")
+    console.log('SUCCESS!', response.status, response.text);
+  },
+  (error) => {
+    alert("Service Unavailable please try agail later")
+    console.log('FAILED...', error);
+  },
+);
+
+        }
+
         // Show the slides
         function showSlides() {
             let slides = document.getElementsByClassName("slides");
@@ -63,3 +85,7 @@ let totalSlides = 6;
                 link.classList.add('active'); // Add active class to the current page
             }
         });
+
+
+
+    
